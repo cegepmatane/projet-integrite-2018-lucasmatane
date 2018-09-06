@@ -1,5 +1,7 @@
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -46,8 +48,7 @@ public class VueAjouterBurger extends Application {
 		panneau.getChildren().add(new Label("Ajouter un burger"));
 		panneau.getChildren().add(grilleBurger);
 		panneau.getChildren().add(this.actionEnregistrerBurger);
-		stade.setScene(new Scene(panneau, 400, 400)); 
-		stade.show();
+		stade.setScene(new Scene(panneau, 400, 400); 
 	}
 	
 	public Burger demanderBurger()
@@ -55,6 +56,8 @@ public class VueAjouterBurger extends Application {
 		return null; 
 	}
 
+	
+	
 	
 	
 

@@ -1,31 +1,38 @@
 
-import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
-
-
-public class VueAjouterBurger extends Application {
+public class VueAjouterBurger extends Scene {
 
 	protected TextField valeurNom;
 	protected TextField valeurFromage;
 	protected TextField valeurPrix;
-	protected TextField valeurViande; 
+	protected TextField valeurViande;
 	
 	
 	protected Button actionEnregistrerBurger = null;
-	public void start(Stage stade) throws Exception {
-		
-		VBox panneau = new VBox(); 
+	
+	public VueAjouterBurger()  {
+		super(new VBox(), 400, 400);
+		VBox panneau = (VBox) this.getRoot();
 		GridPane grilleBurger = new GridPane();
 		this.actionEnregistrerBurger = new Button("Enregistrer");
 		
+		this.actionEnregistrerBurger.setOnAction(new EventHandler<ActionEvent>() {
 
+			@Override
+			public void handle(ActionEvent arg0) {
+				
+				
+				
+			}});
+		
 		valeurNom = new TextField();
 		grilleBurger.add(new Label("Nom : "), 0, 0);
 		grilleBurger.add(valeurNom, 1, 0);
@@ -46,15 +53,17 @@ public class VueAjouterBurger extends Application {
 		panneau.getChildren().add(new Label("Ajouter un burger"));
 		panneau.getChildren().add(grilleBurger);
 		panneau.getChildren().add(this.actionEnregistrerBurger);
-		stade.setScene(new Scene(panneau, 400, 400)); 
-		stade.show();
 	}
 	
 	public Burger demanderBurger()
 	{
-		return null; 
+		Burger mouton = new Burger(this.valeurNom.getText(), 
+								this.valeurFromage.getText(), 
+								this.valeurPrix.getText(), 
+								this.valeurViande.getText());
+		return mouton;
 	}
-
+	
 	
 	
 

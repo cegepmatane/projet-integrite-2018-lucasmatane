@@ -47,7 +47,6 @@ public class VueAjouterBurger extends Application {
 		panneau.getChildren().add(grilleBurger);
 		panneau.getChildren().add(this.actionEnregistrerBurger);
 		stade.setScene(new Scene(panneau, 400, 400)); 
-		stade.show();
 	}
 	
 	public Burger demanderBurger()

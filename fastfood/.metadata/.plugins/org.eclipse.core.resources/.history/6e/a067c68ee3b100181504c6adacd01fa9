@@ -5,6 +5,7 @@ import java.util.List;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
@@ -25,7 +26,7 @@ public class VueListeBurger extends Application
  		stade.setScene(new Scene(panneau, 500, 500));
  		stade.show();		
  		
- 		List<Burger> listeBurgerTest = new ArrayList<Burger>();
+ 		List listeBurgerTest = new ArrayList<Burger>();
  		listeBurgerTest.add(new Burger("Cheesy", "Mozza", "3$12", "Steack"));
  		listeBurgerTest.add(new Burger("Backone", "Cheddar", "2$12", "Beacon"));
  		listeBurgerTest.add(new Burger("Giant", "Cheddar et Mozza", "3$70", "Steack"));
