@@ -1,0 +1,62 @@
+package VueBurger;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import action.ControleurBurger;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+import modele.Mouton;
+
+public class VueListeBurger extends Application
+{
+	private GridPane grilleBurger = null;
+	
+	@Override
+	public void start(Stage stade) throws Exception {
+		Pane panneau = new Pane();	
+ 		grilleBurger = new GridPane();
+ 		
+ 		
+ 		panneau.getChildren().add(grilleBurger);
+ 		stade.setScene(new Scene(panneau, 400, 400));
+ 		stade.show();		
+ 		
+ 		/// TEST ///
+ 		List listeBurgerTest = new ArrayList<Burger>();
+ 		listeBurgerTest.add(new Burger("Dolly", "Grise", "20 kg", "5 juin 2015"));
+ 		listeBurgerTest.add(new Burger("Molly", "Rousse", "20 kg", "5 mai 2016"));
+ 		listeBurgerTest.add(new Burger("Arthurus", "Noire", "20 kg", "5 mars 2017"));
+ 		listeBurgerTest.add(new Burger("Cheese", "Jaune", "20 kg", "5 septembre 2015"));
+ 		this.afficherListeBurger(listeBurgerTest); // Appel de ma fonction avant de la programmer (pour tester à mesure)
+
+		
+	}
+	
+	public void afficherListeBurger(List<Burger> listeBurger)
+	{
+		this.grilleBurger.getChildren().clear();
+		
+		int numero = 0;
+		this.grilleBurger.add(new Label("Nom"), 0, numero);
+		this.grilleBurger.add(new Label("Viande"), 1, numero);	
+		for(Burger burger : listeBurger)
+		{
+			numero++;
+			this.grilleBurger.add(new Label(burger.getNom()), 0, numero);
+			this.grilleBurger.add(new Label(burger.getViande()), 1, numero);			
+			this.grilleBurger.add(new Button("Editer"), 2, numero);
+		}
+	}
+
+
+	
+	
+
+
+}
