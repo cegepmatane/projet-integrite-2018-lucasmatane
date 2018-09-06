@@ -45,12 +45,9 @@ public class VueListeBurger extends Application
 		{
 			numero++;
 			this.grilleBurger.add(new Label(burger.getNom()), 0, numero);
-			this.grilleBurger.add(new Label(burger.getViande()), 1, numero);		
-			this.grilleBurger.add(new Label(burger.getFromage()), 2, numero); 
-			this.grilleBurger.add(new Label(burger.getPrix()), 3, numero); 
-			//this.grilleBurger.add(new Button("Editer"), 2, numero);
+			this.grilleBurger.add(new Label(burger.getViande()), 1, numero);			
+			this.grilleBurger.add(new Button("Editer"), 2, numero);
 		}
-		
 	}
 
 

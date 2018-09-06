@@ -41,16 +41,14 @@ public class VueListeBurger extends Application
 		int numero = 0;
 		this.grilleBurger.add(new Label("Nom"), 0, numero);
 		this.grilleBurger.add(new Label("Viande"), 1, numero);	
-		for(Burger burger : listeBurger)
+		/*for(Burger burger : listeBurger)
 		{
 			numero++;
 			this.grilleBurger.add(new Label(burger.getNom()), 0, numero);
-			this.grilleBurger.add(new Label(burger.getViande()), 1, numero);		
-			this.grilleBurger.add(new Label(burger.getFromage()), 2, numero); 
-			this.grilleBurger.add(new Label(burger.getPrix()), 3, numero); 
-			//this.grilleBurger.add(new Button("Editer"), 2, numero);
+			this.grilleBurger.add(new Label(burger.getViande()), 1, numero);			
+			this.grilleBurger.add(new Button("Editer"), 2, numero);
 		}
-		
+		*/
 	}
 
 
