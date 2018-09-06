@@ -1,0 +1,2 @@
+INDEX VERSION 1.127+/Users/lucassehairi/Documents/a&w/.metadata/.plugins/org.eclipse.jdt.core
+4206390693.index

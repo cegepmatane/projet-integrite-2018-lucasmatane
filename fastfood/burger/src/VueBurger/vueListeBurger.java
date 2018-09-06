@@ -1,0 +1,45 @@
+package burger;
+
+import java.util.List;
+
+import action.ControleurBurger;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
+import modele.Mouton;
+
+public class vueListeBurger extends scene
+{
+	protected GridPane grilleBurger;
+	
+	private ControleurBurger controleur = null;
+	
+	
+	public VueListeBurger() 
+	{
+		super(new GridPane(), 400,400);
+		grilleBurger = (GridPane) this.getRoot();
+	}
+	public void afficherListeBurger(List<Burger> listeBurger)
+	{
+		this.grilleBurger.getChildren().clear();
+		
+		int numero = 0;
+		this.grilleBurger.add(new Label("Nom"), 0, numero);
+		this.grilleBurger.add(new Label("Viande"), 1, numero);	
+		for(Burger burger : listeBurger)
+		{
+			numero++;
+			this.grilleBurger.add(new Label(burger.getNom()), 0, numero);
+			this.grilleBurger.add(new Label(burger.getViande()), 1, numero);			
+			this.grilleBurger.add(new Button("Editer"), 2, numero);
+		}
+	}
+	
+	public void setControleur(ControleurBurger controleur) 
+	{
+		this.controleur = controleur;
+	}
+
+}
