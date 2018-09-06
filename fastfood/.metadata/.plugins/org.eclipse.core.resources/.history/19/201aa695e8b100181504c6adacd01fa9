@@ -52,14 +52,8 @@ public class VueAjouterBurger extends Application {
 	
 	public Burger demanderBurger()
 	{
-		Burger burger = new Burger(this.valeurNom.getText(), 
-				this.valeurFromage.getText(), 
-				this.valeurPrix.getText(), 
-				this.valeurViande.getText()); 
-		
-		return burger; 
-				
-		}
+		return null; 
+	}
 
 	
 	

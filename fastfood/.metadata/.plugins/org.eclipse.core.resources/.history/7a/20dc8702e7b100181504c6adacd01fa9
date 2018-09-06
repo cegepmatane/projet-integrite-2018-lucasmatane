@@ -11,7 +11,8 @@ public class VueBurger extends Application {
 	protected Label valeurNom;
 	protected Label valeurFromage;
 	protected Label valeurPrix;
-	protected Label valeurViande; 
+	protected Label valeurViande;
+	
 	
 	
 	public void start(Stage stade) throws Exception {
