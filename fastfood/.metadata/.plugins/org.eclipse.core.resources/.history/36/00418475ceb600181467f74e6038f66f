@@ -3,7 +3,6 @@ import java.util.List;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-
 public class NavigateurDesVues extends Application
 {
 	
@@ -11,14 +10,10 @@ public class NavigateurDesVues extends Application
 	private VueListeBurger vueListeBurger;
 	private VueBurger vueBurger;
 	
-	private ControleurBurger controleur; 
-	private Stage stade; 
 	
 	public NavigateurDesVues() 
 	{
 	
-		this.controleur = new ControleurBurger(this); 
-		
 		this.vueAjouterBurger = new VueAjouterBurger();
 		this.vueListeBurger = new VueListeBurger();
 		this.vueBurger = new VueBurger();
@@ -43,30 +38,9 @@ public class NavigateurDesVues extends Application
 	public void start(Stage stade) throws Exception
 	{
 		stade.setScene(this.vueBurger);
-		stade.show(); 
-		
-		this.naviguerVersVueListeBurger(); 
-		this.naviguerVersVueBurger(); 
-		this.naviguerVersVueAjouterBurger(); 
+		stade.show();
 	}
-	
-	public void naviguerVersVueListeBurger()
-	{
-		stade.setScene(this.vueListeBurger);
-		stade.show(); 
-	}
-	
-	public void naviguerVersVueBurger()
-	{
-		stade.setScene(this.vueBurger);
-		stade.show(); 
-	}
-	
-	public void	naviguerVersVueAjouterBurger()
-	{
-		stade.setScene(this.vueAjouterBurger);
-		stade.show(); 
-	}
-	
+
+
 }
 
