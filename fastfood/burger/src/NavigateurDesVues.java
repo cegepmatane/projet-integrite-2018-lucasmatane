@@ -1,5 +1,46 @@
-package burger;
+import java.util.ArrayList;
+import java.util.List;
+import javafx.application.Application;
+import javafx.stage.Stage;
 
-public class NavigateurDesVues {
+public class NavigateurDesVues extends Application
+{
+	
+	private VueAjouterBurger vueAjouterBurger;
+	private VueListeBurger vueListeBurger;
+	private VueBurger vueBurger;
+	
+	
+	public NavigateurDesVues() 
+	{
+	
+		this.vueAjouterBurger = new VueAjouterBurger();
+		this.vueListeBurger = new VueListeBurger();
+		this.vueBurger = new VueBurger();
+		
+		
+		
+		List listeBurgerTest = new ArrayList<Burger>();
+		listeBurgerTest.add(new Burger("Mega", "Mozza", "3$12", "Poulet"));
+		listeBurgerTest.add(new Burger("Savoyard", "Reblochon", "2$", "Jambon")); 
+		listeBurgerTest.add(new Burger("Mexicain", "Fromage piquant", "3$", "Poulet Tika"));
+		listeBurgerTest.add(new Burger("l'Europeen", "Gouda", "4$", "Pathe"));
+		this.vueListeBurger.afficherListeBurger(listeBurgerTest);
+
+	
+	
+	
+	Burger burger = new Burger("Simple", "Fromage", "1$", "Steack"); 
+	this.vueBurger.afficherBurger(burger); 
+
+	}
+
+	public void start(Stage stade) throws Exception
+	{
+		stade.setScene(this.vueBurger);
+		stade.show();
+	}
+
 
 }
+
