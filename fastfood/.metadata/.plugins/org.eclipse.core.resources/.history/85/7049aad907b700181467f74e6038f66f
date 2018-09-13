@@ -20,13 +20,13 @@ public class VueListeBurger extends Scene {
 		grilleBurger = (GridPane) this.getRoot();
 	}
 	
-	public void afficherListeBurger(List<Burger> listeBurger)
+	public void afficherListeMouton(List<Burger> listeBurger)
 	{
 		this.grilleBurger.getChildren().clear();
 		
 		int numero = 0;
 		this.grilleBurger.add(new Label("Nom"), 0, numero);
-		this.grilleBurger.add(new Label("Viande"), 1, numero);			
+		this.grilleBurger.add(new Label("Naissance"), 1, numero);			
 		for(Burger burger : listeBurger)
 		{
 			numero++;

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;burger/src/action/ControleurMouton.java&apos; to &apos;ControleurBurger.java&apos;" description="Rename resource &apos;ControleurMouton.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/action/ControleurMouton.java" name="ControleurBurger.java" stamp="1536808109159" updateReferences="true"/>
+</session>

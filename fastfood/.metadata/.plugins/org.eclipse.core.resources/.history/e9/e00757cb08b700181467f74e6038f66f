@@ -26,7 +26,7 @@ public class VueListeBurger extends Scene {
 		
 		int numero = 0;
 		this.grilleBurger.add(new Label("Nom"), 0, numero);
-		this.grilleBurger.add(new Label("Viande"), 1, numero);			
+		this.grilleBurger.add(new Label("Naissance"), 1, numero);			
 		for(Burger burger : listeBurger)
 		{
 			numero++;

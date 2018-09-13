@@ -1,24 +1,27 @@
 package Vue;
+import java.util.ArrayList;
+import java.util.List;
 
-import action.ControleurBurger;
+import Controleur.ControleurBurger;
 import javafx.application.Application;
 import javafx.stage.Stage;
+import modele.Burger;
 
 public class NavigateurDesVues extends Application{
 	
 	private Stage stade;
 	
-	private VueAjouterBurger vueAjouterBurger = null;
-	private VueListeBurger vueListeBurger = null;
-	private VueBurger vueBurger = null;
+	private VueAjouterBurger vueAjouterMouton = null;
+	private VueListeBurger vueListeMouton = null;
+	private VueBurger vueMouton = null;
 	
 	private ControleurBurger controleur = null;
 	
 	public NavigateurDesVues() 
 	{		
-		this.vueAjouterBurger = new VueAjouterBurger();
-		this.vueListeBurger = new VueListeBurger();
-		this.vueBurger = new VueBurger();
+		this.vueAjouterMouton = new VueAjouterBurger();
+		this.vueListeMouton = new VueListeBurger();
+		this.vueMouton = new VueBurger();
 	}
 	
 
@@ -41,7 +44,7 @@ public class NavigateurDesVues extends Application{
 		return vueListeBurger;
 	}
 
-	public VueBurger getVueBurger() {
+	public Vue getVueBurger() {
 		return vueBurger;
 	}
 	

@@ -18,20 +18,21 @@ public class VueBurger extends Scene{
 		super(new GridPane(),400,400);
 		GridPane grilleBurger = (GridPane) this.getRoot();
 
+		// https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/GridPane.html
 		valeurNom = new Label("");
 		grilleBurger.add(new Label("Nom : "), 0, 0);
 		grilleBurger.add(valeurNom, 1, 0);
 		
 		valeurFromage = new Label("");
-		grilleBurger.add(new Label("Fromage : "), 0, 1);
+		grilleBurger.add(new Label("Couleur : "), 0, 1);
 		grilleBurger.add(valeurFromage, 1, 1);
 
 		valeurPrix = new Label("");
-		grilleBurger.add(new Label("Prix : "), 0, 2);
+		grilleBurger.add(new Label("Poids : "), 0, 2);
 		grilleBurger.add(valeurPrix, 1, 2);		
 
 		valeurViande = new Label("");
-		grilleBurger.add(new Label("Viande : "), 0, 3);
+		grilleBurger.add(new Label("Naissance : "), 0, 3);
 		grilleBurger.add(valeurViande, 1, 3);				
 	}
 	
