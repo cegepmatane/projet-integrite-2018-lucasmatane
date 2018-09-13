@@ -1,10 +1,12 @@
+
+import Vue.NavigateurDesVues;
+
 public class App {
 
 	public static void main(String[] parametres) {
-		// TODO Auto-generated method stub
-		//VueBurger.launch(VueAjouterBurger.class, parametres); 
-		//VueAjouterBurger.launch(VueAjouterBurger.class, parametres); 
+
 		NavigateurDesVues.launch(NavigateurDesVues.class, parametres);
+		
 	}
 
 }

@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class ControleurBurger {
+	
+	private NavigateurDesVues navigateur;
+	private VueAjouterBurger vueAjouterBurger = null;
+	private VueListeBurger vueListeBurger = null;
+	private VueBurger vueBurger = null;
+		
+	private ControleurBurger()
+	{
+		System.out.println("Initialisation du controleur");		
+	}
+	
+	public void activerVues(NavigateurDesVues navigateur)
+	{
+		this.navigateur = navigateur;
+		this.vueAjouterBurger = navigateur.getVueAjouterBurger();
+		this.vueBurger = navigateur.getVueBurger();
+		this.vueListeBurger = navigateur.getVueListeBurger();
+						
+		//// TEST ////
+		Burger burger = new Burger("Dolly", "Grise", "20 kg", "5 juin 2015");
+		this.vueBurger.afficherBurger(burger); // Appel de ma fonction avant de la programmer (pour tester à mesure)					
+		
+		this.navigateur.naviguerVersVueBurger();
+		
+		/// TEST ///
+		List listeBurgerTest = new ArrayList<Burger>();
+		listeBurgerTest.add(new Burger("Dolly", "Grise", "20 kg", "5 juin 2015"));
+		listeBurgerTest.add(new Burger("Molly", "Rousse", "20 kg", "5 mai 2016"));
+		listeBurgerTest.add(new Burger("Arthurus", "Noire", "20 kg", "5 mars 2017"));
+		listeBurgerTest.add(new Burger("Cheese", "Jaune", "20 kg", "5 septembre 2015"));
+		this.vueListeBurger.afficherListeBurger(listeBurgerTest); // Appel de ma fonction avant de la programmer (pour tester à mesure)
+		
+		this.navigateur.naviguerVersVueListeBurger();		
+				
+		//this.navigateur.naviguerVersVueAjouterMouton();
+	}
+	
+	// SINGLETON DEBUT
+	private static ControleurBurger instance = null;
+	public static ControleurBurger getInstance()
+	{
+		if(null == instance) instance = new ControleurBurger();
+		return instance;
+	}
+	// SINGLETON FINI
+
+}

@@ -1,0 +1,5 @@
+package accesseur;
+
+public class BurgerDAO {
+
+}
